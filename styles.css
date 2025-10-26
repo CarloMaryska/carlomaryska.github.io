@@ -1,11 +1,336 @@
-body {
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+* {
     margin: 0;
-    font-size: 2em;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Section (White Background) */
+.top-section {
+    background-color: white;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    padding: 200px 80px 60px 200px;
+    position: relative;
+    z-index: 2;
+}
+
+.top-section .content {
+    max-width: 600px;
+}
+
+.greeting {
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.name {
+    font-size: 70px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+    line-height: 1.1;
+    font-family: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.description {
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+}
+
+/* Wavy Separator */
+.wavy-separator {
+    height: 60px;
+    background: rgb(0, 122, 255);
+    position: relative;
+    z-index: 3;
+    clip-path: polygon(0% 40%, 20% 20%, 40% 50%, 60% 30%, 80% 60%, 100% 25%, 100% 100%, 0% 100%);
+}
+
+/* Second Wavy Separator */
+.wavy-separator-2 {
+    height: 60px;
+    background: rgb(0, 122, 255);
+    position: relative;
+    z-index: 3;
+}
+
+.wavy-separator-2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f8f9fa;
+    clip-path: polygon(0% 40%, 20% 20%, 40% 50%, 60% 30%, 80% 60%, 100% 25%, 100% 100%, 0% 100%);
+}
+
+/* Bottom Section (Blue Background) */
+.bottom-section {
+    background-color: rgb(0, 122, 255);
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    padding: 60px 200px 100px 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.bottom-section .content {
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+}
+
+.year {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+.company {
+    font-size: 56px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.company-description {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 500px;
+}
+
+.cta {
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.cta:hover {
+    opacity: 0.8;
+}
+
+/* Sketch App Icon */
+.sketch-icon {
+    position: absolute;
+    right: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.icon-container {
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.sketch-image {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+    border-radius: 16px;
+}
+
+/* Third Section (Light Grey Background) */
+.third-section {
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: flex-start;
+    padding: 80px 200px 100px 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.third-section .content {
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+}
+
+.section-label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.project-title {
+    font-size: 56px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.project-description {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.project-story {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.personal-note {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    font-style: italic;
+}
+
+.cta-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cta-link {
+    font-size: 18px;
+    font-weight: 400;
+    color: #e74c3c;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.cta-link:hover {
+    opacity: 0.8;
+}
+
+.link {
+    color: #333;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.link:hover {
+    color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-section {
+        padding: 150px 100px 40px 100px;
+    }
+    
+    .bottom-section {
+        padding: 40px 100px 80px 100px;
+    }
+    
+    .third-section {
+        padding: 60px 100px 60px 100px;
+    }
+    
+    .name,
+    .company,
+    .project-title {
+        font-size: 48px;
+    }
+    
+    .sketch-icon {
+        right: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .icon-container {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .sketch-image {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-section {
+        padding: 120px 60px 30px 60px;
+    }
+    
+    .bottom-section {
+        padding: 30px 60px 60px 60px;
+    }
+    
+    .third-section {
+        padding: 40px 60px 40px 60px;
+    }
+    
+    .name,
+    .company,
+    .project-title {
+        font-size: 36px;
+    }
+    
+    .greeting,
+    .description,
+    .year,
+    .company-description,
+    .cta,
+    .project-description,
+    .project-story,
+    .personal-note,
+    .cta-link {
+        font-size: 16px;
+    }
+    
+    .sketch-icon {
+        right: 60px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .icon-container {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .sketch-image {
+        width: 70px;
+        height: 70px;
+    }
 }
