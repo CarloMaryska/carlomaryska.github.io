@@ -253,15 +253,15 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .top-section {
-        padding: 150px 100px 40px 100px;
+        padding: 150px 60px 40px 60px;
     }
     
     .bottom-section {
-        padding: 40px 100px 80px 100px;
+        padding: 40px 60px 80px 60px;
     }
     
     .third-section {
-        padding: 60px 100px 60px 100px;
+        padding: 60px 60px 60px 60px;
     }
     
     .name,
@@ -271,33 +271,31 @@ body {
     }
     
     .sketch-icon {
-        right: 100px;
-        top: 50%;
-        transform: translateY(-50%);
+        display: none;
     }
     
     .icon-container {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
     }
     
     .sketch-image {
-        width: 90px;
-        height: 90px;
+        width: 80px;
+        height: 80px;
     }
 }
 
 @media (max-width: 480px) {
     .top-section {
-        padding: 120px 60px 30px 60px;
+        padding: 120px 30px 30px 30px;
     }
     
     .bottom-section {
-        padding: 30px 60px 60px 60px;
+        padding: 30px 30px 60px 30px;
     }
     
     .third-section {
-        padding: 40px 60px 40px 60px;
+        padding: 40px 30px 40px 30px;
     }
     
     .name,
@@ -319,18 +317,6 @@ body {
     }
     
     .sketch-icon {
-        right: 60px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    
-    .icon-container {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .sketch-image {
-        width: 70px;
-        height: 70px;
+        display: none;
     }
 }
