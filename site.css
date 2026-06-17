@@ -78,7 +78,7 @@ body {
     left: 0;
     right: 0;
     bottom: -2px;
-    background: #f8f9fa;
+    background: #1a1a1a;
     clip-path: polygon(0% 40%, 20% 20%, 40% 50%, 60% 30%, 80% 60%, 100% 25%, 100% 100%, 0% 100%);
 }
 
@@ -184,7 +184,7 @@ body {
     border-radius: 16px;
 }
 
-.strive-icon-container {
+.showup-icon-container {
     background: transparent;
     box-shadow: none;
 }
