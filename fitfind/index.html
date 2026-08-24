@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitFind: See an outfit. Shop the pieces.</title>
+  <meta name="description" content="FitFind finds outfits from a photo or a social post and takes you to shoppable product pages. Jacket, jeans, and shoes from real stores." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" type="image/png" href="assets/app-icon.png" />
+  <link rel="apple-touch-icon" href="assets/app-icon.png" />
+  <meta property="og:title" content="FitFind: See an outfit. Shop the pieces." />
+  <meta property="og:description" content="One photo in. Real product pages out." />
+  <meta property="og:image" content="assets/app-icon.png" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css?v=11" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="./">
+      <img src="assets/app-icon.png" width="36" height="36" alt="" />
+      <span>FitFind</span>
+    </a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#social">Social</a>
+    </nav>
+    <a class="pill-btn" href="#download">Get the app</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>See an outfit.<br />Shop the pieces.</h1>
+        <p class="lede">
+          One photo in. Real product pages out. FitFind finds the jacket, jeans,
+          and shoes, then takes you straight to the shop.
+        </p>
+        <div class="cta-row">
+          <a class="btn-black" href="#download">Get FitFind</a>
+        </div>
+      </div>
+
+      <div class="hero-stage" aria-label="FitFind scan demonstration">
+        <div class="phone" id="scan-demo">
+          <div class="phone-bezel">
+            <div class="island"></div>
+            <div class="phone-screen">
+              <img class="look" src="assets/look.png" alt="Outfit: light blue jacket, wide jeans, suede clogs" />
+              <div class="vignette"></div>
+              <div class="scan-beam"></div>
+              <div class="crop jacket" data-piece="jacket"><span>Jacket</span></div>
+              <div class="crop jeans" data-piece="jeans"><span>Jeans</span></div>
+              <div class="crop shoes" data-piece="shoes"><span>Shoes</span></div>
+              <div class="finder" aria-hidden="true">
+                <i></i><i></i><i></i><i></i>
+              </div>
+              <div class="results">
+                <article class="row">
+                  <img src="assets/jacket.png" alt="" />
+                  <div>
+                    <strong>Light blue zip jacket</strong>
+                    <span>Arket</span>
+                  </div>
+                  <b>€79</b>
+                </article>
+                <article class="row">
+                  <img src="assets/jeans.png" alt="" />
+                  <div>
+                    <strong>Baggy light-wash jeans</strong>
+                    <span>Weekday</span>
+                  </div>
+                  <b>€49</b>
+                </article>
+                <article class="row">
+                  <img src="assets/shoes.png" alt="" />
+                  <div>
+                    <strong>Suede slip-on clogs</strong>
+                    <span>Birkenstock</span>
+                  </div>
+                  <b>€89</b>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="stage-caption">Scans each piece, then opens a real product page.</p>
+      </div>
+    </section>
+
+    <section class="how" id="how">
+      <p class="eyebrow">How it works</p>
+      <h2>From a look to a cart<br />in three steps.</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-media picker">
+            <div class="picker-bar">
+              <span>Cancel</span>
+              <strong>Recents</strong>
+              <span class="picker-add">Add</span>
+            </div>
+            <div class="picker-grid">
+              <div class="pick is-on">
+                <img src="assets/look.png" alt="" />
+                <i class="tick" aria-hidden="true">✓</i>
+              </div>
+              <div class="pick">
+                <img src="assets/look-street.jpg" alt="" />
+              </div>
+              <div class="pick">
+                <img src="assets/look-going-out.jpg" alt="" />
+              </div>
+              <div class="pick">
+                <img src="assets/jacket.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <h3>Drop in a photo</h3>
+          <p>A full-body shot, a screenshot, or a saved look. FitFind reads the clothes, not the caption.</p>
+        </article>
+        <article class="card">
+          <div class="card-media share-card">
+            <img class="share-still" src="assets/look-going-out.jpg" alt="" />
+            <div class="mini-sheet">
+              <div class="sheet-handle"></div>
+              <div class="mini-sheet-head">
+                <img class="mini-thumb" src="assets/look-going-out.jpg" alt="" />
+                <div>
+                  <strong>Video · 0:14</strong>
+                  <span>Shared from a social app</span>
+                </div>
+              </div>
+              <div class="mini-apps">
+                <div class="mini-app">
+                  <img src="assets/app-icon.png" alt="" />
+                  <span>FitFind</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Or share a post</h3>
+          <p>Paste a TikTok or Instagram link, or use the share sheet. Pick the frame you want scanned.</p>
+        </article>
+        <article class="card">
+          <div class="card-media detail-page">
+            <img src="assets/jacket.png" alt="Light blue zip jacket" />
+            <div class="detail-sheet">
+              <p>Jacket</p>
+              <h4>Light blue zip jacket</h4>
+              <div class="detail-row"><span>Seller</span><b>Arket</b></div>
+              <div class="detail-row"><span>Price</span><b>€79</b></div>
+              <span class="seller-btn">Buy at seller ↗</span>
+            </div>
+          </div>
+          <h3>Shop the pieces</h3>
+          <p>Each result is a purchasable product page. More results and cheaper options live one tap away.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="social" id="social">
+      <div class="social-copy">
+        <p class="eyebrow light">Where is that from?</p>
+        <h2>Saw it on TikTok or Instagram?</h2>
+        <p class="lede">
+          Share the post to FitFind, pick the frame, shop the fit. Overlay credits
+          on the clothes help land the right piece, then you open the shop.
+        </p>
+        <ul class="points">
+          <li><b>01</b> Share or paste the post</li>
+          <li><b>02</b> Pick the photo or frame</li>
+          <li><b>03</b> Scan jacket, jeans, shoes</li>
+        </ul>
+      </div>
+      <div class="social-visual">
+        <div class="tt-phone" id="share-demo">
+          <video class="tt-video" src="assets/cut_video.mp4" muted loop playsinline autoplay></video>
+          <aside class="tt-rail" aria-hidden="true">
+            <div class="tt-avatar">
+              <span class="tt-person"></span>
+              <span class="tt-plus">+</span>
+            </div>
+            <div class="tt-action">
+              <span class="tt-icon"><svg viewBox="0 0 24 24"><path d="M12 21.35 10.55 20.03C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+              <span>24.8K</span>
+            </div>
+            <div class="tt-action">
+              <span class="tt-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v9.2a2 2 0 0 1-2 2H8.4L4 20.8V6a2 2 0 0 1 2-2z"/></svg></span>
+              <span>312</span>
+            </div>
+            <div class="tt-action">
+              <span class="tt-icon"><svg viewBox="0 0 24 24"><path d="M6 3.5h12A1.5 1.5 0 0 1 19.5 5v16.1L12 17.2 4.5 21.1V5A1.5 1.5 0 0 1 6 3.5z"/></svg></span>
+              <span>1,204</span>
+            </div>
+            <div class="tt-action tt-share">
+              <span class="tt-icon"><svg viewBox="0 0 24 24"><path d="M14 3.5 21 12l-7 8.5v-5.2H9.2A6.8 6.8 0 0 0 2.4 21v-1.7A9.3 9.3 0 0 1 11.6 10H14V3.5z"/></svg></span>
+              <span>Share</span>
+            </div>
+          </aside>
+
+          <div class="tt-crops" aria-hidden="true">
+            <div class="crop shirt" data-piece="shirt"><span>Shirt</span></div>
+            <div class="crop jeans" data-piece="jeans"><span>Jeans</span></div>
+            <div class="crop shoes" data-piece="shoes"><span>Shoes</span></div>
+          </div>
+
+          <div class="results tt-results">
+            <article class="row">
+              <img src="assets/jacket.png" alt="" />
+              <div>
+                <strong>Light blue zip jacket</strong>
+                <span>Arket</span>
+              </div>
+              <b>€79</b>
+            </article>
+            <article class="row">
+              <img src="assets/jeans.png" alt="" />
+              <div>
+                <strong>Baggy light-wash jeans</strong>
+                <span>Weekday</span>
+              </div>
+              <b>€49</b>
+            </article>
+            <article class="row">
+              <img src="assets/shoes.png" alt="" />
+              <div>
+                <strong>Suede slip-on clogs</strong>
+                <span>Birkenstock</span>
+              </div>
+              <b>€89</b>
+            </article>
+          </div>
+
+          <div class="share-sheet" aria-hidden="true">
+            <div class="sheet-handle"></div>
+            <div class="sheet-head">
+              <div class="sheet-thumb"></div>
+              <div>
+                <strong>Video · 0:14</strong>
+                <span>Shared from a social app</span>
+              </div>
+            </div>
+            <div class="sheet-apps">
+              <button class="sheet-app is-fitfind" type="button">
+                <img src="assets/app-icon.png" alt="" />
+                <span>FitFind</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="less">
+      <div class="less-copy">
+        <p class="eyebrow">Same piece, different prices</p>
+        <h2>Find the same piece for less.</h2>
+        <p class="lede">
+          FitFind keeps Google’s visual match, then shows cheaper shoppable alternatives
+          when they exist. Accuracy first: a missing result beats the wrong category.
+        </p>
+      </div>
+      <div class="less-graphic" aria-hidden="true">
+        <article class="deal found">
+          <span class="deal-tag">In the photo</span>
+          <img src="assets/jacket.png" alt="" />
+          <strong>Light blue zip jacket</strong>
+          <span>Arket</span>
+          <b>€79</b>
+        </article>
+        <div class="deal-alts">
+          <article class="deal cheaper">
+            <span class="pricetag">-38%</span>
+            <img src="assets/jacket.png" alt="" />
+            <strong>Light blue zip jacket</strong>
+            <span>H&amp;M</span>
+            <b>€49</b>
+          </article>
+          <article class="deal cheaper">
+            <span class="pricetag">-65%</span>
+            <img src="assets/jacket.png" alt="" />
+            <strong>Light blue zip jacket</strong>
+            <span>Vinted · Secondhand</span>
+            <b>€28</b>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="download" id="download">
+      <img class="download-icon" src="assets/app-icon.png" width="88" height="88" alt="FitFind app icon" />
+      <h2>Get FitFind on iPhone</h2>
+      <p>See the outfit. Shop the pieces. Built for iOS.</p>
+      <a class="btn-black" href="#" aria-label="Download FitFind on the App Store">Download</a>
+    </section>
+  </main>
+
+  <footer>
+    <span class="foot-brand">
+      <img src="assets/app-icon.png" width="22" height="22" alt="" />
+      © 2026 Carlo Maryska
+    </span>
+    <nav class="foot-links">
+      <a href="support/">Support</a>
+      <a href="terms/">Terms of Use</a>
+      <a href="privacy/">Privacy Policy</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

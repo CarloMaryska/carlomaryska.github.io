@@ -253,6 +253,53 @@ body {
     background: #02051B;
 }
 
+/* Sixth Section (FitFind) */
+.sixth-section {
+    background-color: #ffffff;
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    padding: 60px 200px 100px 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.sixth-section .content {
+    max-width: 600px;
+    z-index: 2;
+    position: relative;
+}
+
+.sixth-section .year {
+    color: #666;
+    opacity: 1;
+}
+
+.sixth-section .company,
+.sixth-section .company-description,
+.sixth-section .cta {
+    color: #1a1a1a;
+}
+
+.fitfind-separator {
+    background: #02051B;
+}
+
+.fitfind-separator::before {
+    background: #ffffff;
+}
+
+.fitfind-icon-container {
+    background: transparent;
+    box-shadow: none;
+}
+
+.fitfind-icon-container .sketch-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 24px;
+}
+
 .third-section .content {
     max-width: 600px;
     z-index: 2;
@@ -349,6 +396,10 @@ body {
     .fifth-section {
         padding: 40px 60px 80px 60px;
     }
+
+    .sixth-section {
+        padding: 40px 60px 80px 60px;
+    }
     
     .name,
     .company,
@@ -389,6 +440,10 @@ body {
     }
 
     .fifth-section {
+        padding: 30px 30px 60px 30px;
+    }
+
+    .sixth-section {
         padding: 30px 30px 60px 30px;
     }
     
