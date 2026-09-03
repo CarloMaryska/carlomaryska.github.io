@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy: Lunio</title>
-  <meta name="description" content="How Lunio handles your data. Screen Time and HealthKit stay on your device. Optional iCloud sync uses your private Apple account." />
+  <meta name="description" content="How Lunio handles your data under GDPR. Screen Time and HealthKit stay on your device. Optional iCloud sync uses your private Apple account. Product analytics use PostHog EU." />
   <meta name="theme-color" content="#02051B" />
   <link rel="icon" type="image/png" href="../icon-lunio.png" />
   <link rel="apple-touch-icon" href="../icon-lunio.png" />
-  <link rel="stylesheet" href="../styles.css?v=2" />
+  <link rel="stylesheet" href="../styles.css?v=3" />
 </head>
 <body>
   <div class="night"></div>
@@ -29,20 +29,22 @@
     </a>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: 6 August 2026</p>
+    <p class="updated">Last updated: 3 September 2026</p>
 
     <p>
       Lunio is built around a simple idea: what happens on your phone at night is
       your business. This policy explains what data the app uses, where it lives,
-      and the choices you have.
+      who it is shared with, and the choices you have under the GDPR and similar laws.
     </p>
 
     <div class="callout">
       <p>
         <strong>In short:</strong> Screen Time activity, Health sleep data, streaks,
-        and evening scroll history stay on your device. If you enable iCloud Sync,
-        selected settings and journal content sync through your private Apple iCloud
-        account. We do not sell your data or use it for advertising.
+        journal entries, and evening scroll history are processed on your device.
+        If you are signed in to iCloud, selected settings, your onboarding profile,
+        to-dos, and journal content sync through your private Apple iCloud account —
+        not a Lunio server. Release builds send anonymous product-analytics events
+        to PostHog in the EU. We do not sell your data or use it for advertising.
       </p>
     </div>
 
@@ -55,101 +57,183 @@
     <p>
       If you are in the European Economic Area (EEA), the United Kingdom, or
       Switzerland, Carlo Maryska is the data controller for personal data processed
-      through Lunio, to the extent GDPR or equivalent law applies.
+      through Lunio, to the extent the GDPR, UK GDPR, or equivalent law applies.
+      No data protection officer is appointed.
     </p>
 
     <h2>Data that stays on your device</h2>
     <p>
       The following is stored locally on your iPhone or iPad (including in Lunio’s
-      App Group shared with its Screen Time extensions) and is not uploaded to our
-      servers:
+      App Group shared with its Screen Time extensions) and is not uploaded to a
+      Lunio-operated server:
     </p>
     <ul>
-      <li>Which apps you choose to protect, Soft block / Hard block settings, and your Power-Down window.</li>
+      <li>Your display name and onboarding answers (age band, evening habits, triggers, goals, bedtime, and similar questionnaire answers).</li>
+      <li>Which apps you choose to protect, Gentle Pause / Shortcuts setup, Hardcore-mode preferences, and your Power-Down window.</li>
       <li>Screen-time and scroll-minute activity measured during the protected evening window, including evening recap summaries.</li>
-      <li>Streaks and related progress state.</li>
-      <li>Manual sleep quality entries you add in the app.</li>
-      <li>Shortcuts setup status and Hardcore mode preferences.</li>
+      <li>Streaks, achievements, and related progress state.</li>
+      <li>Journal entries (day reviews and parked worries) and overnight to-dos.</li>
+      <li>Manual sleep quality ratings you add in the app.</li>
+      <li>Notification, haptic, and sleep-tracking preferences.</li>
     </ul>
     <p>
       Lunio does not operate its own backend for this on-device data. We cannot read
-      your Screen Time selection tokens or evening scroll history from our side.
+      your Screen Time selection tokens, evening scroll history, Health samples, or
+      journal text from our side.
     </p>
 
-    <h2>Optional iCloud Sync</h2>
+    <h2>Onboarding profile</h2>
     <p>
-      If iCloud is available on your device and sync is enabled, Lunio may sync the
-      following to your <strong>private</strong> CloudKit database associated with
-      your Apple ID:
+      During setup, Lunio asks for a first name (for greetings) and questionnaire
+      answers such as age band, what keeps you up at night, how often it happens,
+      triggers, what you have already tried, how long it has been going on, how you
+      feel in the morning, what you want to change, an evening strategy, intended
+      versus actual sleep time, whether you use a sleep-tracking device, how you
+      found Lunio, and an optional referral code.
+    </p>
+    <p>
+      Some of those answers can relate to health or well-being (for example tiredness
+      or sleep). That can be special-category data under Article 9 GDPR. You provide
+      it voluntarily so Lunio can personalise the plan. It is stored on device and,
+      after onboarding, may sync via iCloud as described below. It is not sent to
+      PostHog or RevenueCat.
+    </p>
+
+    <h2>iCloud Sync</h2>
+    <p>
+      If you are signed in to iCloud on your device, Lunio starts syncing after
+      onboarding (when your plan is created). There is no separate Lunio account.
+      Sync uses the <strong>private</strong> CloudKit database for the container
+      associated with your Apple ID:
     </p>
     <ul>
-      <li>Onboarding profile and app settings (for example Power-Down times and notification preferences).</li>
+      <li>Onboarding profile and app settings (for example Power-Down times, ritual preferences, and notification preferences).</li>
       <li>Tomorrow to-dos.</li>
       <li>Journal entries (day reviews and parked worries).</li>
     </ul>
     <p>
-      This sync uses Apple iCloud / CloudKit. Data is stored in your private iCloud
-      database, not in a Lunio-operated server. You can turn sync off and use
-      “Delete synced data” in Settings to clear synced CloudKit records and related
-      local preferences. Screen Time history, streaks, manual sleep ratings, and
-      HealthKit samples are not included in iCloud Sync.
+      Data is stored in your private iCloud database, not on a Lunio-operated
+      server. Apple may also deliver silent CloudKit notifications so other devices
+      signed in to the same iCloud account can stay in sync. Screen Time history,
+      streaks, achievements, manual sleep ratings, and HealthKit samples are not
+      included in iCloud Sync.
+    </p>
+    <p>
+      “Delete account” in Settings clears Lunio data on this device and deletes the
+      synced CloudKit records. Your Apple subscription stays with your Apple ID
+      until you cancel it in iOS Settings.
     </p>
 
     <h2>Apple Health</h2>
     <p>
-      If you choose to connect Apple Health, Lunio can read your sleep analysis data
-      to show it in the app (for example Insights). Access is granted through
-      Apple’s Health permissions and can be revoked at any time in the Health app
-      or iOS Settings. Health data is processed on your device and is not uploaded
-      to Lunio or used for advertising.
+      If you choose to connect Apple Health, Lunio requests access to Sleep Analysis
+      so it can read your sleep (including stages such as in bed, awake, core, deep,
+      and REM when available) and show it in Insights. Access is granted through
+      Apple’s Health permissions and can be revoked in the Health app or iOS
+      Settings. Health data is processed on your device and is not uploaded to
+      Lunio, PostHog, or RevenueCat, and is not used for advertising.
+    </p>
+    <p>
+      Sleep data from Apple Health is health data (special-category data under
+      Article 9 GDPR). The legal basis is your explicit consent via Apple’s Health
+      permission sheet.
     </p>
 
     <h2>Screen Time &amp; app protection</h2>
     <p>
       Lunio uses Apple’s Screen Time APIs (Family Controls), Managed Settings, and
-      Device Activity to pause or block the apps you select during your Power-Down
-      window, and to summarize evening phone use for your recap. Apple provides
-      this in a privacy-preserving way: the app can restrict selected apps and
-      derive evening activity metrics without sending your full usage history to us.
+      Device Activity to pause the apps you select during your Power-Down window,
+      and to summarize evening phone use for your recap. Apple provides this in a
+      privacy-preserving way: the app can restrict selected apps and derive evening
+      activity metrics without sending your full usage history to us.
     </p>
     <p>
-      Soft block may use a Shortcuts automation you set up yourself so that opening
-      a protected app can open Lunio for a short ritual instead.
+      Gentle Pause may use a Shortcuts automation you set up yourself so that
+      opening a protected app can open Lunio for a short ritual instead. Optional
+      Hardcore mode applies additional on-device restrictions (for example blocking
+      app uninstall and date/time changes). Those preferences stay on the device.
     </p>
 
     <h2>Notifications, Shortcuts &amp; Reminders</h2>
     <ul>
-      <li><strong>Notifications:</strong> Lunio can schedule local notifications (for example Power-Down start and morning review). Delivery happens on your device.</li>
-      <li><strong>Shortcuts:</strong> Soft block setup may require creating an automation in Apple’s Shortcuts app. That automation runs on your device.</li>
-      <li><strong>Reminders:</strong> If you choose to export to-dos, Lunio can create reminders in Apple Reminders via EventKit. This is optional and not a continuous sync.</li>
+      <li><strong>Notifications:</strong> Lunio can schedule local notifications for Power-Down start, morning review, and a one-shot reminder that a free trial is ending. Delivery happens on your device. You can turn categories off in Lunio Settings or disable notifications in iOS Settings.</li>
+      <li><strong>Shortcuts:</strong> Gentle Pause setup may require creating an automation in Apple’s Shortcuts app. That automation runs on your device.</li>
+      <li><strong>Reminders:</strong> If you choose to export to-dos, Lunio can create reminders in Apple Reminders via EventKit. This is optional, one-shot, and not a continuous sync.</li>
+      <li><strong>Background audio:</strong> Soundscapes can keep playing when the app is in the background. Audio stays on your device.</li>
     </ul>
+
+    <h2>Product analytics (PostHog)</h2>
+    <p>
+      In <strong>release</strong> builds, Lunio uses
+      <a class="inline" href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">PostHog</a>
+      (EU Cloud, <code>eu.i.posthog.com</code>) to understand whether onboarding and
+      core features work. Analytics are disabled in debug builds. We do not use
+      advertising SDKs, IDFA, or App Tracking Transparency, and we do not run
+      session replay / screen recording.
+    </p>
+    <p>
+      Events are anonymous. Lunio does not call PostHog identify, so we do not
+      attach your name, email, or Apple ID to an analytics profile. Typical events
+      include which onboarding screen was shown, whether Shortcuts setup was
+      completed or skipped, that Pro was unlocked, which ritual type was started,
+      and which soundscape was started (id and title). The SDK may also send
+      standard app-lifecycle events (installed, opened, backgrounded) and device
+      metadata such as app version, OS version, and an anonymous distinct ID stored
+      on the device.
+    </p>
+    <p>
+      Journal text, parked worries, Health samples, Screen Time tokens, evening
+      minute counts, to-dos, and your questionnaire answers are not sent to PostHog.
+    </p>
+    <p>
+      Legal basis: legitimate interests (Article 6(1)(f) GDPR) in making Lunio
+      reliable and improving the product, balanced against your rights. You can
+      object at any time by emailing
+      <a class="inline" href="mailto:hello@carlomaryska.com">hello@carlomaryska.com</a>.
+      Deleting your Lunio account resets the analytics ID on that device.
+    </p>
 
     <h2>Subscriptions (RevenueCat &amp; Apple)</h2>
     <p>
-      Paid features are offered through Apple In-App Purchase. Lunio uses RevenueCat
+      Paid features are offered through Apple In-App Purchase. Lunio uses
+      <a class="inline" href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat</a>
       to manage subscription status and entitlements. RevenueCat may process
-      purchase-related identifiers and subscription status as described in
-      <a class="inline" href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat’s privacy policy</a>.
-      Payment details are handled by Apple; we do not receive your full payment card
-      information.
+      purchase-related identifiers and subscription status. Payment details are
+      handled by Apple; we do not receive your full payment card information.
     </p>
 
     <h2>Accounts</h2>
     <p>
       Lunio does not require a separate Lunio account, email signup, or social login.
-      Optional iCloud Sync uses your existing Apple ID through Apple’s iCloud
-      services.
+      iCloud Sync uses your existing Apple ID through Apple’s iCloud services.
+      Subscription status is tied to your Apple ID via the App Store and RevenueCat.
     </p>
 
     <h2>What we do not collect</h2>
     <ul>
       <li>We do not sell or rent your personal data.</li>
       <li>We do not use your data for third-party advertising or cross-app tracking.</li>
-      <li>We do not run our own analytics or advertising SDKs in the app.</li>
+      <li>We do not use advertising networks, SKAdNetwork campaign tracking, or IDFA.</li>
       <li>We do not build a marketing profile of you across other apps or websites.</li>
+      <li>We do not operate a Lunio login, and we do not read your journal or Health data from our computers.</li>
     </ul>
 
-    <h2>Diagnostics</h2>
+    <h2>Who we share data with</h2>
+    <p>
+      We do not sell personal data. Depending on the features you use, the following
+      parties process data:
+    </p>
+    <ul>
+      <li><strong>Apple:</strong> iOS, App Store / In-App Purchase, iCloud / CloudKit, Health, Screen Time, Shortcuts, Reminders, and (if you enable it) Apple’s aggregated crash and performance reporting. Apple typically acts as an independent controller for those platform services. See <a class="inline" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple’s privacy policy</a>.</li>
+      <li><strong>PostHog, Inc.:</strong> product analytics on EU Cloud, as a processor for the events described above. See <a class="inline" href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">PostHog’s privacy policy</a>.</li>
+      <li><strong>RevenueCat, Inc.:</strong> subscription status and entitlements, as a processor. See <a class="inline" href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer">RevenueCat’s privacy policy</a>.</li>
+    </ul>
+    <p>
+      Animations in the app (for example Lottie) are bundled with the app and are
+      not a separate analytics or advertising service.
+    </p>
+
+    <h2>Apple diagnostics</h2>
     <p>
       Lunio may benefit from Apple’s standard, aggregated crash and performance
       reporting if you have shared analytics with app developers enabled on your
@@ -162,51 +246,62 @@
       Where the GDPR applies, we process personal data on these bases:
     </p>
     <ul>
-      <li><strong>Contract / service delivery:</strong> to provide Lunio’s core features you request (protection windows, rituals, journal, to-dos, Insights).</li>
-      <li><strong>Consent:</strong> for optional permissions such as Screen Time authorization, Health access, notifications, Reminders export, and enabling iCloud Sync where consent is the appropriate basis.</li>
-      <li><strong>Legitimate interests:</strong> to keep the app secure and stable, and to respond to privacy requests, balanced against your rights.</li>
+      <li><strong>Contract / service delivery (Art. 6(1)(b)):</strong> to provide Lunio’s core features you request (protection windows, rituals, journal, to-dos, Insights, subscriptions).</li>
+      <li><strong>Consent (Art. 6(1)(a), and Art. 9(2)(a) where health data is involved):</strong> Screen Time authorization, Apple Health sleep access, notifications, Reminders export, and voluntary onboarding answers that relate to health or well-being.</li>
+      <li><strong>Legitimate interests (Art. 6(1)(f)):</strong> product analytics as described above, keeping the app secure and stable, and responding to privacy or support requests, balanced against your rights.</li>
     </ul>
     <p>
       You may withdraw consent at any time in iOS Settings, Health, Screen Time
-      permissions, or by disabling iCloud Sync / deleting synced data in Lunio,
-      without affecting the lawfulness of processing before withdrawal.
+      permissions, or by using Delete account in Lunio, without affecting the
+      lawfulness of processing before withdrawal.
+    </p>
+    <p>
+      We do not use automated decision-making that produces legal or similarly
+      significant effects (Art. 22 GDPR).
     </p>
 
     <h2>Your rights (GDPR &amp; similar laws)</h2>
     <p>
       Depending on where you live, you may have the right to access, rectify, erase,
       restrict, or object to certain processing, and to data portability. You may
-      also lodge a complaint with your local supervisory authority.
+      also withdraw consent and lodge a complaint with a supervisory authority —
+      in Germany, typically the data protection authority of the federal state
+      where you live, or the
+      <a class="inline" href="https://www.bfdi.bund.de/" target="_blank" rel="noopener noreferrer">Federal Commissioner for Data Protection and Freedom of Information (BfDI)</a>.
     </p>
     <p>
       Because most Lunio data lives on your device or in your private iCloud
       database, the fastest way to exercise many of these rights is directly on
-      your device: delete journal or to-do content in the app, delete synced data
-      in Settings, revoke Health / Screen Time / notification permissions, or
-      delete the app. For other requests, email
+      your device: edit or delete journal, to-dos, and your name in the app; use
+      Delete account in Settings; revoke Health / Screen Time / notification /
+      Reminders permissions; or delete the app. For access, objection (including
+      to analytics), or other requests we must handle ourselves, email
       <a class="inline" href="mailto:hello@carlomaryska.com">hello@carlomaryska.com</a>.
     </p>
 
     <h2>International transfers</h2>
     <p>
-      If you use iCloud Sync or Apple In-App Purchase / RevenueCat, Apple and
-      RevenueCat may process data in the United States or other countries. Those
-      transfers are governed by Apple’s and RevenueCat’s terms and applicable
-      safeguards. Lunio does not operate a separate global data center for your
-      Screen Time or Health data.
+      PostHog product analytics are sent to PostHog’s EU Cloud. Apple and RevenueCat
+      may process data in the United States or other countries. Those transfers are
+      governed by Apple’s and RevenueCat’s terms and applicable safeguards (including
+      standard contractual clauses where required). Lunio does not operate a
+      separate global data center for your Screen Time or Health data.
     </p>
 
     <h2>Retention</h2>
     <ul>
-      <li><strong>On-device data</strong> remains until you delete it in the app, clear it via Settings, or remove the app (subject to iOS backup behavior).</li>
-      <li><strong>iCloud Sync data</strong> remains in your private CloudKit database until you delete synced data, disable sync and clear records, or otherwise remove it via Apple ID / iCloud controls.</li>
+      <li><strong>On-device data</strong> remains until you delete it in the app, use Delete account, or remove the app (subject to iOS backup behavior).</li>
+      <li><strong>iCloud Sync data</strong> remains in your private CloudKit database until you delete the account in Lunio or otherwise remove it via Apple ID / iCloud controls.</li>
+      <li><strong>PostHog analytics</strong> are kept only as long as needed to understand product usage. Account deletion resets the anonymous ID on that device; you can also ask us to delete analytics records we can reasonably identify.</li>
       <li><strong>Subscription records</strong> are retained by Apple and RevenueCat as needed to provide and audit purchases.</li>
     </ul>
 
     <h2>Children</h2>
     <p>
-      Lunio is not directed at children under 13 (or the equivalent minimum age in
-      your country), and we do not knowingly collect personal information from them.
+      Lunio is not directed at children. In the EEA the age for valid consent is
+      generally 16 (member states may set 13–16). We do not knowingly collect
+      personal information from children below the applicable age. If you believe
+      we have, contact us and we will delete it.
     </p>
 
     <h2>Changes to this policy</h2>

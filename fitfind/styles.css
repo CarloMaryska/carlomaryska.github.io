@@ -870,7 +870,17 @@ footer {
 .doc .updated { color: var(--muted); margin: 0 0 28px; }
 .doc h2 { margin: 36px 0 12px; font-size: 22px; }
 .doc p, .doc li { color: #3a3a3c; line-height: 1.6; }
+.doc ul { padding-left: 22px; }
+.doc li { margin-bottom: 8px; }
 .doc a { text-decoration: underline; text-underline-offset: 3px; }
+.doc-callout {
+  background: var(--wash);
+  border: 1px solid var(--hairline);
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin: 8px 0 28px;
+}
+.doc-callout p { margin: 0; color: var(--ink); }
 
 .back-link {
   display: inline-flex;
