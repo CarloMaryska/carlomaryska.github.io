@@ -1,104 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lunio: Stop the midnight doomscrolling loop</title>
-  <meta name="description" content="Lunio protects your apps at bedtime and offers a calm ritual instead of the scroll, for better sleep and lighter mornings." />
-  <meta name="theme-color" content="#02051B" />
-  <link rel="icon" type="image/png" href="icon-lunio.png" />
-  <link rel="apple-touch-icon" href="icon-lunio.png" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Lunio: Stop the midnight doomscrolling loop" />
-  <meta property="og:description" content="Apps protected at bedtime. A calm ritual instead of the scroll." />
-  <meta property="og:image" content="icon-lunio.png" />
-  <meta property="og:type" content="website" />
-
-  <link rel="stylesheet" href="styles.css?v=2" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#02051B">
+    <meta name="color-scheme" content="dark">
+    <title>Lunio</title>
+    <meta name="description" content="Lunio pauses the apps that keep you scrolling at bedtime and gives you a two-minute ritual instead. Sleep tracking via Apple Health.">
+    <meta property="og:title" content="Lunio · One more video, then sleep.">
+    <meta property="og:description" content="Apps paused at bedtime. A calm ritual instead of the scroll.">
+    <meta property="og:image" content="https://carlomaryska.com/images/apps/lunio.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="../images/apps/lunio-favicon.png">
+    <link rel="apple-touch-icon" href="../images/apps/lunio.png?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,100;1,9..144,300..600,100&family=Figtree:wght@400;500;600;700&family=Geist+Mono:wght@400;600&display=swap">
+    <link rel="stylesheet" href="./landing.css">
 </head>
 <body>
-  <div class="night"></div>
+    <div class="sky" aria-hidden="true"><div class="stars"></div></div>
 
-  <!-- Subtle starfield -->
-  <svg class="stars" width="100%" height="100%" preserveAspectRatio="none" aria-hidden="true">
-    <g fill="#A8BAFF">
-      <circle cx="9%"  cy="12%" r="1.1" opacity="0.55" />
-      <circle cx="21%" cy="28%" r="0.9" opacity="0.35" />
-      <circle cx="16%" cy="52%" r="1"   opacity="0.30" />
-      <circle cx="33%" cy="14%" r="0.8" opacity="0.40" />
-      <circle cx="46%" cy="9%"  r="1.2" opacity="0.30" />
-      <circle cx="63%" cy="18%" r="0.9" opacity="0.45" />
-      <circle cx="72%" cy="7%"  r="1"   opacity="0.35" />
-      <circle cx="84%" cy="22%" r="1.3" opacity="0.55" />
-      <circle cx="91%" cy="40%" r="0.9" opacity="0.30" />
-      <circle cx="88%" cy="62%" r="1"   opacity="0.28" />
-      <circle cx="57%" cy="30%" r="0.7" opacity="0.30" />
-    </g>
-  </svg>
+    <header class="bar">
+        <a class="bar-brand" href="#top" aria-label="Lunio, back to top">
+            <img src="../images/apps/lunio.png?v=2" width="32" height="32" alt="">
+            <span>Lunio</span>
+        </a>
 
-  <!-- Top bar -->
-  <header class="topbar">
-    <div class="wrap">
-      <a class="brand" href="./">
-        <img src="icon-lunio.png" alt="Lunio app icon" />
-        <span>Lunio</span>
-      </a>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <main class="wrap">
-    <section class="hero">
-      <div class="hero-copy">
-        <h1>Stop the midnight doomscrolling loop</h1>
-
-        <p class="subline">
-          Lunio gently pauses the apps that keep you scrolling and offers a short
-          ritual instead, so you fall asleep sooner and wake up lighter.
-        </p>
-
-        <div class="cta-row">
-          <a class="btn-download" href="https://apps.apple.com/us/app/scroll-block-at-bedtime-lunio/id6797219907" aria-label="Download Lunio on the App Store">Download</a>
-          <span class="cta-note">Free on iPhone &amp; iPad</span>
+        <div class="night" aria-hidden="true">
+            <span class="night-clock" data-clock>23:12</span>
+            <span class="night-track"><i data-moon></i></span>
+            <span class="night-end">08:30</span>
         </div>
 
-        <div class="chips">
-          <span class="chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#4F84FE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            Gentle Pause &amp; Hard Block
-          </span>
-          <span class="chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#A8BAFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
-            A ritual instead of the scroll
-          </span>
-          <span class="chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#4AB074" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            Sleep tracking via Apple Health
-          </span>
-        </div>
-      </div>
+        <a class="bar-cta" href="https://apps.apple.com/us/app/scroll-block-at-bedtime-lunio/id6797219907" target="_blank" rel="noopener">Get Lunio</a>
+    </header>
 
-      <div class="hero-visual">
-        <img src="mockup.png" alt="Lunio app showing the sleep window and evening scroll summary" />
-      </div>
-    </section>
-  </main>
+    <main>
+        <!-- 23:12 · hero -->
+        <section class="scene hero" id="top" data-time="23:12">
+            <div class="hero-copy">
+                <p class="tag"><b>23:12</b> Bed. Phone. Again.</p>
+                <h1>One more video,<br><em>then sleep.</em></h1>
+                <p class="lede">You've said that four times tonight. Lunio pauses the apps that keep you up and hands you a two-minute ritual instead.</p>
+                <div class="cta-row">
+                    <a class="store" href="https://apps.apple.com/us/app/scroll-block-at-bedtime-lunio/id6797219907" target="_blank" rel="noopener">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.8-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.4-.8 1.5 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1ZM13.9 4.9c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3-1.5Z"/></svg>
+                        <span><small>Download on the</small>App Store</span>
+                    </a>
+                    <span class="cta-note">Free on iPhone</span>
+                </div>
+            </div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="wrap">
-      <span class="foot-brand">
-        <img src="icon-lunio.png" alt="" />
-        © 2026 Carlo Maryska
-      </span>
-      <nav class="foot-links">
-        <a href="support/">Support</a>
-        <a href="privacy/">Privacy</a>
-        <a href="mailto:hello@carlomaryska.com">Contact</a>
-      </nav>
-    </div>
-  </footer>
+            <div class="doom" aria-hidden="true">
+                <div class="doom-glow" data-glow></div>
+                <div class="doom-phone">
+                    <div class="doom-screen">
+                        <div class="feed" data-feed></div>
+                        <div class="doom-paused">
+                            <span class="mini-face"></span>
+                            <p>Paused until 08:30</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <a class="scroll-cue" href="#wind">
+                <span class="cue-arrow" aria-hidden="true"></span>
+                <span><small>This page is one night<span class="cue-range"> · 23:12 → 08:30</span></small>Keep scrolling. We'll stop you at 00:30.</span>
+            </a>
+        </section>
+
+        <!-- 00:00 · wind-down -->
+        <section class="scene wind" id="wind" data-time="00:00">
+            <div class="copy">
+                <p class="tag"><b>00:00</b> Wind-down starts</p>
+                <h2>Pick a bedtime once.<br><em>Lunio keeps it.</em></h2>
+                <p>Set your sleep window and choose which apps get paused. Thirty minutes before, your phone starts winding down with you.</p>
+
+                <ul class="rows">
+                    <li><span class="ico ico-bed"></span>Sleep window<b>00:30 – 08:30</b></li>
+                    <li><span class="ico ico-moon"></span>Wind-down<b>30 min</b></li>
+                    <li><span class="ico ico-phone"></span>Blocked apps<b>13</b></li>
+                </ul>
+
+                <div class="mode">
+                    <div class="mode-switch" role="radiogroup" aria-label="Protection mode">
+                        <button type="button" role="radio" aria-checked="true" data-mode="gentle">Gentle pause</button>
+                        <button type="button" role="radio" aria-checked="false" data-mode="hard">Hardcore</button>
+                        <span class="mode-pill" aria-hidden="true"></span>
+                    </div>
+                    <p class="mode-copy" data-mode-copy aria-live="polite">Open a blocked app and Lunio steps in with a short ritual first. If you really need it, you can still get through.</p>
+                </div>
+            </div>
+
+            <div class="phones">
+                <figure class="phone phone--back">
+                    <img src="./assets/screen-settings.jpg" width="644" height="1400" loading="lazy" alt="Lunio settings: sleep window, wind-down, blocked apps and Hardcore mode">
+                </figure>
+                <figure class="phone">
+                    <img src="./assets/screen-today.jpg" width="644" height="1400" loading="lazy" alt="Lunio Today screen with the sleep window from 00:30 to 08:30">
+                </figure>
+            </div>
+        </section>
+
+        <!-- 00:30 · the interception -->
+        <section class="scene intercept" id="intercept" data-time="00:30" data-state="idle">
+            <div class="intercept-card">
+                <p class="intercepted">intercepted by Lunio</p>
+
+                <div class="breath" data-breath>
+                    <span class="breath-ring" aria-hidden="true"></span>
+                    <div class="face" data-face aria-hidden="true"></div>
+                </div>
+
+                <h2 data-intercept-title>Hold up.</h2>
+                <p class="intercept-sub" data-intercept-sub>Your quiet time has started. Take eight calm seconds to breathe instead.</p>
+
+                <p class="callout"><span class="ico ico-moon"></span>A short ritual here can reclaim tonight's sleep.</p>
+
+                <button class="btn-white" type="button" data-breathe>Start breathing</button>
+                <button class="btn-quiet" type="button" data-skip>Skip, I'm just browsing</button>
+            </div>
+
+            <figure class="phone phone--real">
+                <img src="./assets/screen-intercept.jpg" width="644" height="1400" loading="lazy" alt="Lunio intercept screen: Hold up, Luke. Your quiet time has started.">
+                <figcaption>The real one, on Luke's phone at 00:30.</figcaption>
+            </figure>
+        </section>
+
+        <!-- 00:34 · rituals -->
+        <section class="scene rituals" id="rituals" data-time="00:34">
+            <div class="copy">
+                <p class="tag"><b>00:34</b> Instead of the scroll</p>
+                <h2>Two minutes.<br><em>Then the urge is gone.</em></h2>
+                <p>Six tiny rituals, each short enough that you'll actually do them. Lunio suggests one when you reach for a blocked app. Or start one on your own.</p>
+            </div>
+
+            <ul class="ritual-grid">
+                <li class="ritual ritual--breathe"><b>Breathe</b><span>2 min</span><i class="r-ico r-wind"></i></li>
+                <li class="ritual ritual--day"><b>Day review</b><span>3 min</span><i class="r-ico r-doc"></i></li>
+                <li class="ritual ritual--worries"><b>Park your worries</b><span>2 min</span><i class="r-ico r-box"></i></li>
+                <li class="ritual ritual--good"><b>Three good things</b><span>2 min</span><i class="r-ico r-heart"></i></li>
+                <li class="ritual ritual--todos"><b>To-dos</b><span>2 min</span><i class="r-ico r-list"></i></li>
+                <li class="ritual ritual--surf"><b>Surf the impulse</b><span>90 sec</span><i class="r-ico r-wave"></i></li>
+            </ul>
+
+            <div class="try">
+                <form class="good" data-good>
+                    <span class="good-heart" aria-hidden="true"></span>
+                    <h3>Try one: three good things</h3>
+                    <p>What was good today? Even something small.</p>
+                    <label><span>1</span><input type="text" maxlength="60" placeholder="What was good today?" autocomplete="off"></label>
+                    <label><span>2</span><input type="text" maxlength="60" placeholder="What was good today?" autocomplete="off"></label>
+                    <label><span>3</span><input type="text" maxlength="60" placeholder="What was good today?" autocomplete="off"></label>
+                    <button class="btn-white" type="submit" disabled>Save</button>
+                    <p class="good-note">Stays in your browser. Nothing is sent.</p>
+
+                    <div class="streak" data-streak aria-live="polite">
+                        <span class="flame" aria-hidden="true">🔥</span>
+                        <ol class="streak-week" aria-hidden="true">
+                            <li>M</li><li>T</li><li>W</li><li>T</li><li>F</li><li>S</li><li>S</li>
+                        </ol>
+                        <p class="streak-title">1 night in a row!</p>
+                        <p class="streak-sub">Good start. Keep going.</p>
+                        <button class="btn-quiet" type="button" data-good-reset>Write three more</button>
+                    </div>
+                </form>
+
+                <figure class="phone">
+                    <img src="./assets/screen-tools.jpg" width="644" height="1400" loading="lazy" alt="Lunio Tools tab with six rituals and soundscapes">
+                </figure>
+            </div>
+        </section>
+
+        <!-- 01:00 · soundscapes -->
+        <section class="scene sounds" id="sounds" data-time="01:00" data-playing="">
+            <div class="sounds-tint" aria-hidden="true"></div>
+            <div class="copy">
+                <p class="tag"><b>01:00</b> Still awake?</p>
+                <h2>Put the phone down.<br><em>Leave the sound on.</em></h2>
+                <p>Soft audio to ride out the urge. It keeps playing in the background while the screen stays off. Go on, press one.</p>
+            </div>
+
+            <div class="sound-grid">
+                <button class="sound" type="button" data-sound="rain" aria-pressed="false"><b>Soft rain</b><span>Steady, grey, close</span><i class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></i></button>
+                <button class="sound" type="button" data-sound="fire" aria-pressed="false"><b>Fireplace</b><span>Warm crackle, low and steady</span><i class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></i></button>
+                <button class="sound" type="button" data-sound="waves" aria-pressed="false"><b>Waves</b><span>In, out, in again</span><i class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></i></button>
+                <button class="sound" type="button" data-sound="snow" aria-pressed="false"><b>Snowfall</b><span>Almost nothing at all</span><i class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></i></button>
+            </div>
+
+            <figure class="phone phone--sound">
+                <img src="./assets/screen-fireplace.jpg" width="644" height="1400" loading="lazy" alt="Lunio Fireplace soundscape playing, with auto-end options">
+            </figure>
+        </section>
+
+        <!-- 03:00 · nothing -->
+        <section class="scene quiet" id="quiet" data-time="03:00">
+            <p class="quiet-time">03:00</p>
+            <p class="quiet-line">Nothing happens here anymore.</p>
+            <p class="quiet-sub">No autoplay. No “one more.” Just sleep.</p>
+            <span class="zzz" aria-hidden="true"><i>z</i><i>z</i><i>z</i></span>
+        </section>
+
+        <!-- 07:10 · insights -->
+        <section class="scene insights" id="insights" data-time="07:10">
+            <div class="copy">
+                <p class="tag"><b>07:10</b> Morning, with proof</p>
+                <h2>Put it away earlier.<br><em>Sleep longer.</em></h2>
+                <p>Lunio reads your sleep from Apple Health and lines it up with the moment you put your phone away. The pattern gets hard to ignore.</p>
+
+                <div class="pattern">
+                    <p class="pattern-tag">Clearest pattern</p>
+                    <p>If you put the phone away before <b class="green">22:30</b>, you sleep on average <b class="green">1.4 hr longer</b>.</p>
+                </div>
+
+                <ul class="bars" data-bars>
+                    <li style="--v: .82" class="bar-green"><span>Early evening<small>Phone away before 11 PM</small></span><b>8.2 hr</b><i></i></li>
+                    <li style="--v: .70" class="bar-lilac"><span>Late evening<small>Between 11 PM and midnight</small></span><b>7.0 hr</b><i></i></li>
+                    <li style="--v: .63" class="bar-blue"><span>Very late<small>After midnight</small></span><b>6.3 hr</b><i></i></li>
+                </ul>
+            </div>
+
+            <figure class="phone">
+                <img src="./assets/screen-insights.jpg" width="644" height="1400" loading="lazy" alt="Lunio Insights: put away earlier, slept better">
+            </figure>
+        </section>
+
+        <!-- 08:30 · morning -->
+        <section class="scene morning" id="morning" data-time="08:30">
+            <div class="sun" aria-hidden="true"></div>
+            <p class="tag"><b>08:30</b> Phone protection off</p>
+            <h2>Good morning.</h2>
+            <p class="morning-sub">That's the whole night. Tonight, try it for real.</p>
+            <a class="store store--big" href="https://apps.apple.com/us/app/scroll-block-at-bedtime-lunio/id6797219907" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.8-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.4-.8 1.5 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1ZM13.9 4.9c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3-1.5Z"/></svg>
+                <span><small>Free on the App Store</small>Download Lunio</span>
+            </a>
+
+            <footer class="foot">
+                <p>Lunio by <a href="../">Carlo Maryska</a></p>
+                <nav aria-label="Legal">
+                    <a href="./support/">Support</a>
+                    <a href="./privacy/">Privacy</a>
+                    <a href="mailto:hello@carlomaryska.com">Contact</a>
+                </nav>
+            </footer>
+        </section>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie_light.min.js"></script>
+    <script src="./landing.js"></script>
 </body>
 </html>
