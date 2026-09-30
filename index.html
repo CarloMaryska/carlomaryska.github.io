@@ -3,102 +3,356 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carlo Maryska · Indie iOS developer</title>
+    <meta name="description" content="Carlo Maryska designs and builds iOS apps with a soft spot for motion, typography and interfaces that feel alive. Maker of Runly, ShowUp, Lunio and FitFind.">
+    <meta name="theme-color" content="#F4F3EF" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0C0D10" media="(prefers-color-scheme: dark)">
+
+    <meta property="og:title" content="Carlo Maryska · Indie iOS developer">
+    <meta property="og:description" content="I design and build iOS apps. Runly, ShowUp, Lunio and FitFind are live on the App Store.">
+    <meta property="og:image" content="https://carlomaryska.com/images/memoji.png">
+    <meta property="og:type" content="website">
+
     <link rel="icon" type="image/png" href="./favicon-96x96.png?v=3" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg?v=3" />
     <link rel="shortcut icon" href="./favicon.ico?v=3" />
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png?v=3" />
     <link rel="manifest" href="./site.webmanifest?v=3" />
-    <link rel="stylesheet" href="./site.css?v=8">
-    <title>Carlo's page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=Nunito:wght@700;800&display=swap">
+    <link rel="stylesheet" href="./site.css?v=17">
+
+    <!-- Apply the saved theme before first paint so there is no flash -->
+    <script>
+        (function () {
+            var theme;
+            try { theme = localStorage.getItem('theme'); } catch (e) {}
+            if (theme !== 'light' && theme !== 'dark') {
+                theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            var root = document.documentElement;
+            root.classList.add('js');
+            root.dataset.theme = theme;
+            root.style.setProperty('--p', theme === 'dark' ? '1' : '0');
+        })();
+    </script>
 </head>
 <body>
-    <div class="container">
-        <!-- Top Section (White Background) -->
-        <div class="top-section">
-            <div class="content">
-                <p class="greeting">Hi, my name is</p>
-                <h1 class="name">Carlo Maryska</h1>
-                <p class="description">I design and build apps</p>
-            </div>
+    <!-- Floating sky: drag the sun down to switch to dark mode -->
+    <aside class="sky-dock" aria-label="Theme">
+        <div class="sky sky--vertical" data-sky data-axis="y">
+            <span class="sky-stars" aria-hidden="true"></span>
+            <button class="sky-orb" type="button" role="switch" aria-checked="false" aria-label="Dark mode"></button>
         </div>
-        
-        <!-- Wavy Separator -->
-        <div class="wavy-separator"></div>
-        
-        <!-- Bottom Section (Orange Background) -->
-        <div class="bottom-section">
-            <div class="content">
-                <p class="year">Project</p>
-                <h2 class="company">Runly</h2>
-                <p class="company-description">I am a runner myself and did not really like the existing running plan apps. So I added my little twist to it and created Runly. It lets you easily create a training plan for your next half marathon or marathon.</p>
-                <a href="https://www.getrunly.app" class="cta">Visit the landing page →</a>
-            </div>
-            
-            <!-- Sketch App Icon -->
-            <div class="sketch-icon">
-                <div class="icon-container">
-                    <img src="images/icon.png" alt="Sketch Icon" class="sketch-image">
-                </div>
-            </div>
-        </div>
-        
-        <!-- Wavy Separator -->
-        <div class="wavy-separator-2"></div>
-        
-        <!-- Fourth Section (Blue Background) -->
-        <div class="fourth-section">
-            <div class="content">
-                <p class="year">Project</p>
-                <h2 class="company">ShowUp</h2>
-                <p class="company-description">ShowUp is a social fitness app that helps you build a consistent gym habit through accountability with friends. Check in at your registered gyms using location-based verification, track your progress with streaks and visual heatmaps, and stay motivated with real-time notifications when friends check in.</p>
-                <a href="./showup/" class="cta">Visit the landing page →</a>
-            </div>
-            
-            <!-- ShowUp App Icon -->
-            <div class="sketch-icon">
-                <div class="icon-container showup-icon-container">
-                    <img src="showup-icon.png" alt="ShowUp Icon" class="sketch-image">
-                </div>
-            </div>
-        </div>
+        <p class="sky-time"><span data-clock>--:--</span><small>in Germany</small></p>
+    </aside>
 
-        <!-- Wavy Separator -->
-        <div class="wavy-separator-3 lunio-separator"></div>
+    <main class="page">
+        <!-- Intro -->
+        <header class="intro reveal">
+            <img class="memoji" src="images/memoji.png" width="140" height="150" alt="Carlo's Memoji">
+            <h1 class="intro-name">Carlo Maryska</h1>
+            <p class="intro-role">Indie iOS developer · Germany</p>
+            <p class="intro-bio">I design and build iOS apps with a soft spot for the details that make software feel right: motion, typography and interfaces that feel alive. Besides that, I love tinkering with AI and seeing what new things become possible.</p>
+            <p class="intro-bio">Four of my apps are live on the App Store. They're lying on the desk below.</p>
+            <nav class="intro-links" aria-label="Links">
+                <a href="#playground">Playground</a>
+                <a href="mailto:hello@carlomaryska.com">Email</a>
+            </nav>
+        </header>
 
-        <!-- Fifth Section (Lunio) -->
-        <div class="fifth-section">
-            <div class="content">
-                <p class="year">Project</p>
-                <h2 class="company">Lunio</h2>
-                <p class="company-description">Lunio protects your apps at bedtime and offers a calm ritual instead of the scroll, so you fall asleep sooner and wake up lighter.</p>
-                <a href="./lunio/" class="cta">Visit the landing page →</a>
+        <!-- Apps as objects on a desk -->
+        <section class="apps" aria-labelledby="apps-title">
+            <h2 class="section-title reveal" id="apps-title">Things I've shipped</h2>
+            <p class="section-hint reveal" data-flip-hint>Tap an object to flip it</p>
+
+            <!-- Ratings for ShowUp, Lunio and FitFind and all usage numbers are placeholders. Replace with real values. -->
+            <div class="desk">
+
+                <!-- Runly: race bib -->
+                <article class="obj reveal" style="--rot:-2.5deg" data-obj>
+                    <div class="obj-tilt">
+                        <div class="obj-inner">
+                            <div class="face face--front" role="button" tabindex="0" aria-pressed="false" aria-label="Runly. Flip for details.">
+                                <div class="sheet bib">
+                                    <span class="bib-hole" style="top:10px;left:10px"></span>
+                                    <span class="bib-hole" style="top:10px;right:10px"></span>
+                                    <span class="bib-hole" style="bottom:52px;left:10px"></span>
+                                    <span class="bib-hole" style="bottom:52px;right:10px"></span>
+                                    <div class="bib-band">
+                                        <span>Runly</span>
+                                        <span>Marathon plan</span>
+                                    </div>
+                                    <div class="bib-number">42.2</div>
+                                    <div class="bib-stats">
+                                        <span><b>9,143 km</b> run with Runly</span>
+                                        <span><b>4.7★</b> rating</span>
+                                    </div>
+                                    <div class="bib-chip">
+                                        <span class="barcode" aria-hidden="true"></span>
+                                        <span>Timing chip · Do not remove</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="face face--back">
+                                <div class="sheet bib back">
+                                    <div class="back-head">
+                                        <img src="images/apps/runly.png" width="52" height="52" alt="">
+                                        <div>
+                                            <h3>Runly</h3>
+                                            <p>Marathon training plans</p>
+                                        </div>
+                                    </div>
+                                    <p class="back-desc">Pick your goal time and get every run mapped out for your next half or full marathon.</p>
+                                    <ul class="back-points">
+                                        <li>Paces calculated from your goal time</li>
+                                        <li>Drag and drop runs around your week</li>
+                                        <li>Save all your race results around the world</li>
+                                    </ul>
+                                    <div class="back-actions">
+                                        <a class="btn-store" href="https://apps.apple.com/app/runly-marathon-training-plans/id6749201015" target="_blank" rel="noopener">App Store</a>
+                                        <a class="btn-link" href="https://www.getrunly.app" target="_blank" rel="noopener">Website ↗</a>
+                                    </div>
+                                    <button class="flip-back" type="button" aria-label="Flip Runly back"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="obj-caption">Runly · race bib</p>
+                </article>
+
+                <!-- ShowUp: gym membership card -->
+                <article class="obj reveal" style="--rot:2deg" data-obj>
+                    <div class="obj-tilt">
+                        <div class="obj-inner">
+                            <div class="face face--front" role="button" tabindex="0" aria-pressed="false" aria-label="ShowUp. Flip for details.">
+                                <div class="sheet gymcard">
+                                    <span class="card-slot" aria-hidden="true"></span>
+                                    <div class="gym-top">
+                                        <span class="gym-brand"><img src="images/apps/showup.png" width="26" height="26" alt="">ShowUp</span>
+                                        <span class="gym-tier">Gym membership</span>
+                                    </div>
+                                    <div>
+                                        <span class="gym-label">Check-ins · last 26 weeks</span>
+                                        <div class="heat" data-heat aria-hidden="true"></div>
+                                    </div>
+                                    <div class="gym-bottom">
+                                        <div><span class="gym-label">Check-ins</span><b>847</b></div>
+                                        <div><span class="gym-label">Rating</span><b>4.8★</b></div>
+                                        <span class="gym-code" aria-hidden="true"><span class="barcode"></span></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="face face--back">
+                                <div class="sheet gymcard back">
+                                    <span class="card-slot" aria-hidden="true"></span>
+                                    <div class="back-head">
+                                        <img src="images/apps/showup.png" width="52" height="52" alt="">
+                                        <div>
+                                            <h3>ShowUp</h3>
+                                            <p>Gym accountability with friends</p>
+                                        </div>
+                                    </div>
+                                    <p class="back-desc">Check in at your gym with location verification, keep your streak alive and see when your friends show up too.</p>
+                                    <div class="back-actions">
+                                        <a class="btn-store" href="https://apps.apple.com/us/app/accountability-partner-showup/id6756323037" target="_blank" rel="noopener">App Store</a>
+                                        <a class="btn-link" href="./showup/">Website →</a>
+                                    </div>
+                                    <button class="flip-back" type="button" aria-label="Flip ShowUp back"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="obj-caption">ShowUp · gym membership card</p>
+                </article>
+
+                <!-- Lunio: phone tucked into bed -->
+                <article class="obj reveal" style="--rot:1.5deg" data-obj>
+                    <div class="obj-tilt">
+                        <div class="obj-inner">
+                            <div class="face face--front" role="button" tabindex="0" aria-pressed="false" aria-label="Lunio. Flip for details.">
+                                <div class="sheet bed">
+                                    <span class="pillow" aria-hidden="true"></span>
+                                    <span class="phone" aria-hidden="true"><i class="phone-island"></i></span>
+                                    <span class="blanket" aria-hidden="true">
+                                        <span class="blanket-text">23:00 – 07:00</span>
+                                    </span>
+                                    <span class="zzz" aria-hidden="true"><i>z</i><i>z</i><i>z</i></span>
+                                    <span class="bed-tag">
+                                        <b>Lunio</b>
+                                        <span>186 nights reclaimed</span>
+                                        <span>4.6★</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="face face--back">
+                                <div class="sheet bed back">
+                                    <div class="back-head">
+                                        <img src="images/apps/lunio.png?v=2" width="52" height="52" alt="">
+                                        <div>
+                                            <h3>Lunio</h3>
+                                            <p>Scroll block at bedtime</p>
+                                        </div>
+                                    </div>
+                                    <p class="back-desc">Pauses the apps that keep you scrolling at night and offers a calm ritual instead.</p>
+                                    <div class="back-actions">
+                                        <a class="btn-store" href="https://apps.apple.com/us/app/scroll-block-at-bedtime-lunio/id6797219907" target="_blank" rel="noopener">App Store</a>
+                                        <a class="btn-link" href="./lunio/">Website →</a>
+                                    </div>
+                                    <button class="flip-back" type="button" aria-label="Flip Lunio back"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="obj-caption">Lunio · phone, tucked in for the night</p>
+                </article>
+
+                <!-- FitFind: receipt -->
+                <article class="obj reveal" style="--rot:-1.5deg" data-obj>
+                    <div class="obj-tilt">
+                        <div class="obj-inner">
+                            <div class="face face--front" role="button" tabindex="0" aria-pressed="false" aria-label="FitFind. Flip for details.">
+                                <div class="sheet receipt">
+                                    <div class="rc-head">
+                                        <img src="images/apps/fitfind.png" width="30" height="30" alt="">
+                                        <b>FitFind</b>
+                                        <span>Style scanner</span>
+                                    </div>
+                                    <div class="rc-row rc-muted"><span>1 photo in</span><span>3 pieces out</span></div>
+                                    <div class="rc-rule"></div>
+                                    <div class="rc-row"><span>Light blue zip jacket</span><span>€79</span></div>
+                                    <div class="rc-row"><span>Baggy light-wash jeans</span><span>€49</span></div>
+                                    <div class="rc-row"><span>Suede slip-on clogs</span><span>€89</span></div>
+                                    <div class="rc-rule"></div>
+                                    <div class="rc-row rc-total"><span>Outfits scanned</span><span>214</span></div>
+                                    <div class="rc-row rc-muted"><span>App Store rating</span><span>4.5★</span></div>
+                                    <span class="barcode rc-barcode" aria-hidden="true"></span>
+                                    <p class="rc-thanks">Thank you for scanning</p>
+                                </div>
+                            </div>
+                            <div class="face face--back">
+                                <div class="sheet receipt back">
+                                    <div class="back-head">
+                                        <img src="images/apps/fitfind.png" width="52" height="52" alt="">
+                                        <div>
+                                            <h3>FitFind</h3>
+                                            <p>See an outfit, shop the pieces</p>
+                                        </div>
+                                    </div>
+                                    <p class="back-desc">Drop in a photo or share a TikTok or Instagram post. FitFind finds the jacket, jeans and shoes and takes you to real product pages.</p>
+                                    <ul class="back-points">
+                                        <li>Works with photos, screenshots and posts</li>
+                                        <li>Real, shoppable product pages</li>
+                                        <li>Cheaper alternatives when they exist</li>
+                                    </ul>
+                                    <div class="back-actions">
+                                        <a class="btn-store" href="https://apps.apple.com/us/app/fitfind-stlye-scanner/id6804238621" target="_blank" rel="noopener">App Store</a>
+                                        <a class="btn-link" href="./fitfind/">Website →</a>
+                                    </div>
+                                    <button class="flip-back" type="button" aria-label="Flip FitFind back"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="obj-caption">FitFind · receipt</p>
+                </article>
             </div>
+        </section>
 
-            <div class="sketch-icon">
-                <div class="icon-container lunio-icon-container">
-                    <img src="lunio/icon-lunio.png" alt="Lunio Icon" class="sketch-image">
-                </div>
+        <!-- Playground -->
+        <section class="playground" id="playground" aria-labelledby="playground-title">
+            <h2 class="section-title reveal" id="playground-title">Playground</h2>
+            <p class="section-hint reveal">Familiar UI, but it's something else</p>
+
+            <div class="experiments">
+                <article class="exp reveal">
+                    <div class="exp-stage">
+                        <div class="sky sky--horizon" data-sky data-axis="x">
+                            <span class="sky-stars" aria-hidden="true"></span>
+                            <button class="sky-orb" type="button" role="switch" aria-checked="false" aria-label="Dark mode"></button>
+                            <span class="scene-clouds" aria-hidden="true"><i class="cloud"></i><i class="cloud"></i><i class="cloud"></i></span>
+                            <span class="scene-birds" aria-hidden="true">
+                                <svg class="bird" viewBox="0 0 20 10"><path d="M1 6 Q5 1 10 6 Q15 1 19 6"/></svg>
+                                <svg class="bird" viewBox="0 0 20 10"><path d="M1 6 Q5 1 10 6 Q15 1 19 6"/></svg>
+                                <svg class="bird" viewBox="0 0 20 10"><path d="M1 6 Q5 1 10 6 Q15 1 19 6"/></svg>
+                            </span>
+                            <span class="shooting-star" aria-hidden="true"></span>
+                            <svg class="hills" viewBox="0 0 400 90" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+                                <path class="hill-back" d="M0 50 C60 20 120 30 170 45 S290 15 400 40 V90 H0Z"/>
+                                <g class="windmill">
+                                    <path class="mill-tower" d="M106 38 L108.5 15 L111.5 15 L114 38Z"/>
+                                    <g class="mill-blades">
+                                        <rect x="108.6" y="3" width="2.8" height="12" rx="1.2"/>
+                                        <rect x="108.6" y="15" width="2.8" height="12" rx="1.2"/>
+                                        <rect x="98" y="13.6" width="12" height="2.8" rx="1.2"/>
+                                        <rect x="110" y="13.6" width="12" height="2.8" rx="1.2"/>
+                                        <circle cx="110" cy="15" r="1.6"/>
+                                    </g>
+                                </g>
+                                <path class="hill-front" d="M0 70 C80 45 150 55 220 66 S330 50 400 62 V90 H0Z"/>
+                                <g class="smoke">
+                                    <circle cx="304" cy="32" r="2.2"/>
+                                    <circle cx="304" cy="32" r="2.2"/>
+                                    <circle cx="304" cy="32" r="2.2"/>
+                                </g>
+                                <rect class="house" x="302" y="34" width="4" height="7"/>
+                                <rect class="house" x="286" y="44" width="22" height="16" rx="1.5"/>
+                                <path class="house" d="M283 45 L297 34 L311 45Z"/>
+                                <rect class="house-window" x="293" y="49" width="7" height="6" rx="1"/>
+                                <rect class="tree-trunk" x="321" y="47" width="2.4" height="12"/>
+                                <circle class="tree" cx="322.2" cy="44" r="7"/>
+                                <rect class="tree-trunk" x="335" y="51" width="2" height="9"/>
+                                <circle class="tree" cx="336" cy="48.5" r="5"/>
+                                <g class="fireflies">
+                                    <circle cx="60" cy="64" r="1.6"/>
+                                    <circle cx="142" cy="60" r="1.6"/>
+                                    <circle cx="176" cy="52" r="1.4"/>
+                                    <circle cx="214" cy="72" r="1.6"/>
+                                    <circle cx="256" cy="64" r="1.4"/>
+                                    <circle cx="352" cy="70" r="1.6"/>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Dark mode, but it's the sun setting</h3>
+                    <p>Drag the sun across the sky. The whole page follows it into the night. The same switch floats on the edge of the page.</p>
+                </article>
+
+                <article class="exp reveal" id="contact">
+                    <div class="exp-stage exp-stage--chat">
+                        <div class="chat">
+                            <div class="chat-head">
+                                <img src="images/memoji.png" width="30" height="32" alt="">
+                                <span>Carlo</span>
+                            </div>
+                            <div class="chat-thread" data-thread aria-live="polite">
+                                <p class="msg msg--in">Hey 👋</p>
+                                <p class="msg msg--in">Got an idea, a question or just want to say hi? Text me.</p>
+                            </div>
+                            <form class="chat-bar" data-chat-form>
+                                <input type="text" name="message" placeholder="iMessage" aria-label="Your message" maxlength="500" autocomplete="off">
+                                <button class="chat-send" type="submit" aria-label="Send">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <h3>Contact form, but it's iMessage</h3>
+                    <p>Write something and hit send. It opens your mail app, so it really reaches me. Or email <a href="mailto:hello@carlomaryska.com">hello@carlomaryska.com</a>.</p>
+                </article>
             </div>
-        </div>
+        </section>
 
-        <!-- Wavy Separator -->
-        <div class="wavy-separator-3 fitfind-separator"></div>
+        <footer class="footer reveal">
+            <span>© 2026 Carlo Maryska · Made by hand in Germany</span>
+            <nav aria-label="Contact">
+                <a href="mailto:hello@carlomaryska.com">Email</a>
+            </nav>
+        </footer>
+    </main>
 
-        <!-- Sixth Section (FitFind) -->
-        <div class="sixth-section">
-            <div class="content">
-                <p class="year">Project</p>
-                <h2 class="company">FitFind</h2>
-                <p class="company-description">FitFind finds outfits from a photo or a social post and takes you to shoppable product pages. Jacket, jeans, and shoes from real stores.</p>
-                <a href="./fitfind/" class="cta">Visit the landing page →</a>
-            </div>
-
-            <div class="sketch-icon">
-                <div class="icon-container fitfind-icon-container">
-                    <img src="fitfind/assets/app-icon.png" alt="FitFind Icon" class="sketch-image">
-                </div>
-            </div>
-        </div>
-    </div>
+    <script src="./main.js?v=2"></script>
 </body>
 </html>
