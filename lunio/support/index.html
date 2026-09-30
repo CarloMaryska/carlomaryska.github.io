@@ -1,65 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Support: Lunio</title>
-  <meta name="description" content="Get help with Lunio. Contact support at hello@carlomaryska.com." />
-  <meta name="theme-color" content="#02051B" />
-  <link rel="icon" type="image/png" href="../icon-lunio.png" />
-  <link rel="apple-touch-icon" href="../icon-lunio.png" />
-  <link rel="stylesheet" href="../styles.css?v=2" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#02051B">
+    <meta name="color-scheme" content="dark">
+    <title>Lunio · Support</title>
+    <meta name="description" content="Get help with Lunio. Contact support at hello@carlomaryska.com.">
+    <link rel="icon" type="image/png" href="../../images/apps/lunio-favicon.png">
+    <link rel="apple-touch-icon" href="../../images/apps/lunio.png?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,100;1,9..144,300..600,100&family=Figtree:wght@400;500;600;700&family=Geist+Mono:wght@400;600&display=swap">
+    <link rel="stylesheet" href="../legal.css">
 </head>
 <body>
-  <div class="night"></div>
+    <header class="bar">
+        <a class="bar-brand" href="../" aria-label="Lunio home">
+            <img src="../../images/apps/lunio.png?v=2" width="32" height="32" alt="">
+            <span>Lunio</span>
+        </a>
+        <nav class="bar-links" aria-label="Lunio">
+            <a href="../support/" aria-current="page">Support</a>
+            <a href="../privacy/">Privacy</a>
+        </nav>
+        <a class="bar-cta" href="https://apps.apple.com/us/app/scroll-block-at-bedtime-lunio/id6797219907" target="_blank" rel="noopener">Get Lunio</a>
+    </header>
 
-  <header class="topbar">
-    <div class="wrap">
-      <a class="brand" href="../">
-        <img src="../icon-lunio.png" alt="Lunio app icon" />
-        <span>Lunio</span>
-      </a>
-    </div>
-  </header>
+    <main class="legal">
+        <div class="legal-head">
+            <p class="tag"><b>03:00</b> Support</p>
+            <h1>Still awake?<br><em>Let's sort it out.</em></h1>
+            <p class="lede">Questions about Lunio, trouble with setup, or something that doesn't work the way it should: write to us.</p>
+            <a class="mail" href="mailto:hello@carlomaryska.com?subject=Lunio%20Support">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+                <span><small>Email us</small>hello@carlomaryska.com</span>
+            </a>
+            <p class="reply">We usually reply within a few business days.</p>
+        </div>
 
-  <main class="doc">
-    <a class="back-link" href="../">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      Back to Lunio
-    </a>
+        <section class="faq" aria-labelledby="faq-title">
+            <h2 id="faq-title">Quick answers</h2>
 
-    <h1>Support</h1>
-    <p class="updated">We're here to help.</p>
+            <details>
+                <summary>Lunio doesn't open when I tap a blocked app</summary>
+                <p>Gentle Pause uses a Shortcuts automation that you set up yourself. Open <strong>Settings → Shortcuts setup</strong> in Lunio and go through it again, then check that the automation is still there in Apple's Shortcuts app.</p>
+            </details>
 
-    <p>
-      If you have questions about Lunio, need help with setup, or want to report a
-      problem, email us at:
-    </p>
+            <details>
+                <summary>My sleep doesn't show up in Insights</summary>
+                <p>Lunio reads Sleep Analysis from Apple Health. Make sure you allowed access (Health app → Sharing → Apps → Lunio) and that your iPhone, Apple Watch or sleep tracker actually writes sleep data into Health.</p>
+            </details>
 
-    <div class="callout">
-      <p>
-        <a class="inline" href="mailto:hello@carlomaryska.com">hello@carlomaryska.com</a>
-      </p>
-    </div>
+            <details>
+                <summary>What does Hardcore mode do?</summary>
+                <p>Hardcore adds extra on-device restrictions during your sleep window, like blocking app uninstalls and changes to the date and time, so there's no quick way around the block. You'll find it in <strong>Settings → Stay locked</strong>.</p>
+            </details>
 
-    <p>
-      We usually reply within a few business days.
-    </p>
-  </main>
+            <details>
+                <summary>How do I cancel my subscription?</summary>
+                <p>Subscriptions are handled by Apple. Open iOS Settings, tap your name, then <strong>Subscriptions</strong> and choose Lunio. Deleting the app doesn't cancel the subscription.</p>
+            </details>
 
-  <footer>
-    <div class="wrap">
-      <span class="foot-brand">
-        <img src="../icon-lunio.png" alt="" />
-        © 2026 Carlo Maryska
-      </span>
-      <nav class="foot-links">
-        <a href="./">Support</a>
-        <a href="../privacy/">Privacy</a>
-        <a href="mailto:hello@carlomaryska.com">Contact</a>
-      </nav>
-    </div>
-  </footer>
+            <details>
+                <summary>How do I delete my data?</summary>
+                <p>Use <strong>Delete account</strong> in Lunio's Settings. It clears Lunio data on this device and deletes the records synced to your private iCloud. More in the <a href="../privacy/">Privacy Policy</a>.</p>
+            </details>
+        </section>
+    </main>
 
+    <footer class="foot">
+        <p>Lunio by <a href="../../">Carlo Maryska</a></p>
+        <nav aria-label="Legal">
+            <a href="../support/">Support</a>
+            <a href="../privacy/">Privacy</a>
+            <a href="mailto:hello@carlomaryska.com">Contact</a>
+        </nav>
+    </footer>
 </body>
 </html>
