@@ -3,40 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="../showup-icon.png" />
+    <meta name="theme-color" content="#050505">
+    <meta name="color-scheme" content="dark">
+    <title>ShowUp · Did you show up today?</title>
+    <meta name="description" content="ShowUp checks you in at the gym by location and tells your friends. Streaks, challenges and a small penalty if you skip.">
+    <meta property="og:title" content="ShowUp · Did you show up today?">
+    <meta property="og:description" content="Gym check-ins your friends can see. Streaks, challenges and penalties for skipping.">
+    <meta property="og:image" content="https://carlomaryska.com/images/apps/showup.png">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="../images/apps/showup.png">
+    <link rel="apple-touch-icon" href="../images/apps/showup.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;600&display=swap">
     <link rel="stylesheet" href="./style.css">
-    <title>ShowUp - Build a consistent gym habit with your friends</title>
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-                <img src="../showup-icon.png" alt="ShowUp Logo">
-            </div>
-            <nav class="nav">
-                <a href="./support/" class="nav-link">Support</a>
-                <a href="./privacy/" class="nav-link">Privacy</a>
-                <a href="https://apps.apple.com/us/app/accountability-partner-showup/id6756323037" class="cta-button">Download ShowUp</a>
-            </nav>
+    <header class="bar" aria-label="ShowUp">
+        <a class="bar-brand" href="#mon" aria-label="ShowUp, back to top">
+            <img src="../images/apps/showup.png" width="34" height="34" alt="">
+            <span>ShowUp</span>
+        </a>
+
+        <ol class="week" aria-label="Your week on this page">
+            <li><a href="#mon" data-dot="0" aria-label="Monday">M</a></li>
+            <li><a href="#tue" data-dot="1" aria-label="Tuesday">T</a></li>
+            <li><a href="#wed" data-dot="2" aria-label="Wednesday">W</a></li>
+            <li><a href="#thu" data-dot="3" aria-label="Thursday">T</a></li>
+            <li><a href="#fri" data-dot="4" aria-label="Friday">F</a></li>
+            <li><a href="#sat" data-dot="5" aria-label="Saturday">S</a></li>
+            <li><a href="#sun" data-dot="6" aria-label="Sunday">S</a></li>
+        </ol>
+
+        <div class="bar-end">
+            <a class="bar-cta" href="https://apps.apple.com/us/app/accountability-partner-showup/id6756323037" target="_blank" rel="noopener">Get the app</a>
         </div>
     </header>
 
-    <main class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Build a consistent gym habit with your friends</h1>
-                <p class="hero-description">Check in when you're at the gym using location verification, and see when your friends do the same. Track your streaks, join challenges and stay accountable together.</p>
-                <div class="download-section">
-                    <a href="https://apps.apple.com/us/app/accountability-partner-showup/id6756323037" class="download-button">
-                        Download on iOS
-                    </a>
-                    <p class="no-credit-card">No credit card required</p>
+    <div class="toast" role="status" aria-live="polite" hidden>
+        <img src="../images/apps/showup.png" width="38" height="38" alt="">
+        <div>
+            <p class="toast-top"><b>ShowUp</b><span>now</span></p>
+            <p class="toast-title">You checked in at Fitness SF</p>
+            <p class="toast-body">Ben, Joshua and Noah just got notified.</p>
+        </div>
+    </div>
+
+    <main>
+        <!-- MONDAY · hero -->
+        <section class="day hero" id="mon" data-day="0">
+            <span class="ghost" aria-hidden="true">MON</span>
+            <p class="day-tag"><span>01</span> Monday · 06:47</p>
+            <h1 class="hero-title">Did you<br>show up <em>today?</em></h1>
+
+            <div class="checkin" data-state="idle">
+                <span class="ring-pulse" aria-hidden="true"></span>
+                <span class="ring-pulse" aria-hidden="true"></span>
+                <span class="ring-pulse" aria-hidden="true"></span>
+                <button class="checkin-btn" type="button" aria-describedby="checkin-hint">
+                    <svg class="checkin-progress" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="47"/></svg>
+                    <svg class="checkin-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5 3.8 10.4c-.8.3-.7 1.4.1 1.6l6.9 1.3 1.3 6.9c.2.8 1.3.9 1.6.1L20.5 3.5Z"/></svg>
+                    <svg class="checkin-check" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5 10 17.5 19.5 7"/></svg>
+                    <span class="checkin-label">Hold to<br>check in</span>
+                </button>
+            </div>
+            <p class="checkin-hint" id="checkin-hint" aria-live="polite"><svg class="pin" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7.5 7.5 0 0 0-7.5 7.5c0 5.3 6.2 11.6 6.9 12.3a.85.85 0 0 0 1.2 0c.7-.7 6.9-7 6.9-12.3A7.5 7.5 0 0 0 12 2Zm0 10.3a2.8 2.8 0 1 1 0-5.6 2.8 2.8 0 0 1 0 5.6Z"/></svg><span data-hint>Fitness SF · 4 m away</span></p>
+
+            <p class="hero-copy">ShowUp checks your location to make sure you're actually at the gym, then tells your friends. Add streaks, challenges and a small penalty for skipping, and going to the gym stops being optional.</p>
+            <a class="store" href="https://apps.apple.com/us/app/accountability-partner-showup/id6756323037" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.8-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.4-.8 1.5 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1ZM13.9 4.9c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3-1.5Z"/></svg>
+                <span><small>Download on the</small>App Store</span>
+            </a>
+        </section>
+
+        <!-- TUESDAY · friends -->
+        <section class="day split" id="tue" data-day="1">
+            <span class="ghost" aria-hidden="true">TUE</span>
+            <div class="copy">
+                <p class="day-tag"><span>02</span> Tuesday</p>
+                <h2>They'll<br>know.</h2>
+                <p>Add friends with your ShowUp code. Every time someone checks in, the whole crew gets a ping. Nobody wants to be the one who didn't show.</p>
+            </div>
+            <div class="visual visual--feed">
+                <figure class="phone">
+                    <img src="./assets/screen-friends.jpg" width="900" height="1951" loading="lazy" alt="ShowUp friends list with each friend's current streak">
+                </figure>
+                <ul class="feed" aria-label="Live check-ins">
+                    <li class="note"><img src="../images/apps/showup.png" alt=""><div><p class="note-top"><b>ShowUp</b><span>now</span></p><p>Ben checked in at Fitness SF</p></div></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- WEDNESDAY · challenges -->
+        <section class="day split split--flip" id="wed" data-day="2">
+            <span class="ghost" aria-hidden="true">WED</span>
+            <div class="copy">
+                <p class="day-tag"><span>03</span> Wednesday</p>
+                <h2>Make it<br>a game.</h2>
+                <p>Early Birds, Workweek Warriors, Consistency Kings, or your own rules. Challenges turn “I should go” into “I'm not losing to Joshua.”</p>
+            </div>
+            <div class="visual">
+                <ul class="hand" aria-label="Challenges">
+                    <li class="card" style="--i:0">
+                        <span class="card-icon" style="--c:#ff9f0a"><svg viewBox="0 0 24 24"><path d="M3 17h18M6 17a6 6 0 0 1 12 0M12 4v3M4.9 8.9l2 2M19.1 8.9l-2 2"/></svg></span>
+                        <b>Early Birds</b><span>Check in before 10am every morning</span>
+                    </li>
+                    <li class="card" style="--i:1">
+                        <span class="card-icon" style="--c:#0a84ff"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></span>
+                        <b>Workweek Warriors</b><span>Check in every day from Monday to Friday</span>
+                    </li>
+                    <li class="card" style="--i:2">
+                        <span class="card-icon" style="--c:#ff453a"><svg viewBox="0 0 24 24"><path d="M12 3c.5 2.6-.9 4.2-2.3 5.7C8.3 10.2 7 11.8 7 14.3 7 17.3 9.2 20 12 20s5-2.4 5-5.4c0-2-.9-3.6-2-4.8-.2 1.3-.9 2.3-1.8 2.7.4-3.3-.3-6.6-1.2-9.5Z"/></svg></span>
+                        <b>Consistency Kings</b><span>Check in every day</span>
+                    </li>
+                    <li class="card" style="--i:3">
+                        <span class="card-icon" style="--c:#30d158"><svg viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg></span>
+                        <b>Create your own</b><span>Your rules, your goals, your friends</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- THURSDAY · penalties -->
+        <section class="day split" id="thu" data-day="3">
+            <span class="ghost" aria-hidden="true">THU</span>
+            <div class="copy">
+                <p class="day-tag"><span>04</span> Thursday</p>
+                <h2>Skip a day?<br>Pay up.</h2>
+                <p>Set a penalty for a challenge. Miss it, and the money goes to your friend. It's surprisingly effective.</p>
+
+                <div class="penalty">
+                    <label for="penalty-range">Your penalty</label>
+                    <output class="penalty-amount" for="penalty-range" data-amount>$15</output>
+                    <input id="penalty-range" type="range" min="0" max="50" step="5" value="15">
+                    <p class="penalty-caption" data-caption>Ben's next protein tub, partly funded by you.</p>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="../Home-portrait.png" alt="ShowUp App Screenshot">
+            <div class="visual">
+                <figure class="phone">
+                    <img src="./assets/screen-penalty.jpg" width="900" height="1951" loading="lazy" alt="ShowUp penalty settings with a 15 dollar monetary penalty">
+                </figure>
+                <img class="float-sheet" src="./assets/sheet-payment.png" width="580" height="252" loading="lazy" alt="Penalty payment: you will receive 15 dollars from Ben because he failed the challenge Early Birds">
             </div>
-        </div>
+        </section>
+
+        <!-- FRIDAY · streak -->
+        <section class="day split split--flip" id="fri" data-day="4">
+            <span class="ghost" aria-hidden="true">FRI</span>
+            <div class="copy">
+                <p class="day-tag"><span>05</span> Friday</p>
+                <h2>Don't break<br>the chain.</h2>
+                <p>Every check-in feeds your streak. Watch it grow, see your best week and your longest run, and feel how much it hurts to lose it.</p>
+                <dl class="stats">
+                    <div><dt>Current streak</dt><dd><span data-count="23">23</span> days</dd></div>
+                    <div><dt>Longest</dt><dd><span data-count="30">30</span></dd></div>
+                    <div><dt>Check-ins</dt><dd><span data-count="120">120</span></dd></div>
+                </dl>
+            </div>
+            <div class="visual">
+                <figure class="phone">
+                    <img src="./assets/screen-streak.jpg" width="900" height="1951" loading="lazy" alt="ShowUp streak screen showing a 23 day streak">
+                </figure>
+            </div>
+        </section>
+
+        <!-- SATURDAY · widgets -->
+        <section class="day split" id="sat" data-day="5">
+            <span class="ghost" aria-hidden="true">SAT</span>
+            <div class="copy">
+                <p class="day-tag"><span>06</span> Saturday</p>
+                <h2>Always<br>in sight.</h2>
+                <p>Widgets put your streak, your week and your friends on your Home Screen. You'll see them every time you unlock your phone. No pressure.</p>
+            </div>
+            <div class="visual">
+                <figure class="phone phone--tilt">
+                    <img src="./assets/screen-widgets.jpg" width="900" height="1951" loading="lazy" alt="ShowUp widgets on the iPhone Home Screen">
+                </figure>
+            </div>
+        </section>
+
+        <!-- SUNDAY · rest + CTA -->
+        <section class="day sunday" id="sun" data-day="6">
+            <span class="ghost" aria-hidden="true">SUN</span>
+            <p class="day-tag"><span>07</span> Sunday · Rest day</p>
+            <h2>Rest.<br>Then plan<br>next week.</h2>
+
+            <p class="summary" data-summary aria-live="polite"></p>
+
+            <fieldset class="commit">
+                <legend>How many days will you show up next week?</legend>
+                <div class="commit-keys">
+                    <label><input type="radio" name="days" value="1"><span>1</span></label>
+                    <label><input type="radio" name="days" value="2"><span>2</span></label>
+                    <label><input type="radio" name="days" value="3"><span>3</span></label>
+                    <label><input type="radio" name="days" value="4" checked><span>4</span></label>
+                    <label><input type="radio" name="days" value="5"><span>5</span></label>
+                    <label><input type="radio" name="days" value="6"><span>6</span></label>
+                    <label><input type="radio" name="days" value="7"><span>7</span></label>
+                </div>
+            </fieldset>
+
+            <a class="store store--big" href="https://apps.apple.com/us/app/accountability-partner-showup/id6756323037" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.8-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.4-.8 1.5 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1ZM13.9 4.9c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3-1.5Z"/></svg>
+                <span><small>Free on the App Store</small><span data-commit-label>Commit to 4 days</span></span>
+            </a>
+        </section>
     </main>
+
+    <footer class="foot">
+        <p>ShowUp by <a href="../">Carlo Maryska</a></p>
+        <nav aria-label="Legal">
+            <a href="./support/">Support</a>
+            <a href="./privacy/">Privacy</a>
+            <a href="./terms/">Terms</a>
+        </nav>
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>
